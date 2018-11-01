@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Test]">
+  <test name="CommonMethods">
+    <classes>
+      <class name="Test.CommonMethods"/>
+      <class name="Test.LoginTestCase"/>
+    </classes>
+  </test> <!-- CommonMethods -->
+  <test name="CommonMethods(failed)">
+    <classes>
+      <class name="Test.LoginTestCase">
+        <methods>
+          <include name="close"/>
+          <include name="setup"/>
+          <include name="login"/>
+        </methods>
+      </class> <!-- Test.LoginTestCase -->
+    </classes>
+  </test> <!-- CommonMethods(failed) -->
+</suite> <!-- Failed suite [Test] -->
