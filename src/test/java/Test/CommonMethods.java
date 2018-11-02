@@ -17,11 +17,11 @@ public class CommonMethods {
 	public static Properties prop;
 	public static FileInputStream FIS;
 	
-	public CommonMethods(WebDriver driver){
+/*	public CommonMethods(WebDriver driver){
 		CommonMethods.driver = driver;
 		PageFactory.initElements(driver, this);
 		
-	}
+	}*/
 	
 	public static void openpropfile() throws IOException
 	{
@@ -45,6 +45,13 @@ public class CommonMethods {
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.get(prop.getProperty("URL"));
+	}
+	
+	public WebDriver getDriver()
+	{
+		 
+		return driver;
+		
 	}
 	
 }

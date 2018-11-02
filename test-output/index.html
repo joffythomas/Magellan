@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite, 3 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -91,7 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods, 1 failed,   1 passed</span>
+                    <span class="method-stats">4 methods, 3 failed,  1 skipped,  </span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -105,21 +105,31 @@
                         <a href="#" class="method navigator-link" panel-name="suite-Test" title="Test.LoginTestCase" hash-for-method="login">login</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content failed suite-Test -->
-                  </li>
-                  <li>
-                    <span class="method-list-title passed">Passed methods</span>
-                    <span class="show-or-hide-methods passed">
-                      <a href="#" panel-name="suite-Test" class="hide-methods passed suite-Test"> (hide)</a> <!-- hide-methods passed suite-Test -->
-                      <a href="#" panel-name="suite-Test" class="show-methods passed suite-Test"> (show)</a> <!-- show-methods passed suite-Test -->
-                    </span>
-                    <div class="method-list-content passed suite-Test">
                       <span>
-                        <img width="3%" src="passed.png"/>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Test" title="Test.LoginTestCase" hash-for-method="logout">logout</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Test" title="Test.CommonMethods" hash-for-method="openbrowser">openbrowser</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content passed suite-Test -->
+                    </div> <!-- method-list-content failed suite-Test -->
+                  </li>
+                  <li>
+                    <span class="method-list-title skipped">Skipped methods</span>
+                    <span class="show-or-hide-methods skipped">
+                      <a href="#" panel-name="suite-Test" class="hide-methods skipped suite-Test"> (hide)</a> <!-- hide-methods skipped suite-Test -->
+                      <a href="#" panel-name="suite-Test" class="show-methods skipped suite-Test"> (show)</a> <!-- show-methods skipped suite-Test -->
+                    </span>
+                    <div class="method-list-content skipped suite-Test">
+                      <span>
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Test" title="Test.UserManagementTestCase" hash-for-method="UserManagement">UserManagement</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content skipped suite-Test -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -146,17 +156,31 @@
 	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
 	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
 	at com.sun.proxy.$Proxy9.sendKeys(Unknown Source)
-	at Core.LoginElements.login(LoginElements.java:36)
-	at Test.LoginTestCase.login(LoginTestCase.java:47)
+	at Core.LoginElements.login(LoginElements.java:43)
+	at Test.LoginTestCase.login(LoginTestCase.java:38)
+... Removed 24 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="logout">
+                  </a> <!-- logout -->
+                  <span class="method-name">logout</span>
+                  <div class="stack-trace">java.lang.NullPointerException
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy9.click(Unknown Source)
+	at Test.LoginTestCase.logout(LoginTestCase.java:53)
 ... Removed 24 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Test-class-failed -->
-          <div class="suite-Test-class-passed">
+          <div class="suite-Test-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
+              <img src="failed.png"/>
               <span class="class-name">Test.CommonMethods</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -165,10 +189,37 @@
                   <a name="openbrowser">
                   </a> <!-- openbrowser -->
                   <span class="method-name">openbrowser</span>
+                  <div class="stack-trace">java.lang.IllegalStateException: The driver executable does not exist: F:\JOFFY JOY\Auto New Workspace\Jesus\bin\chromedriver_win32\chromedriver.exe
+	at com.google.common.base.Preconditions.checkState(Preconditions.java:585)
+	at org.openqa.selenium.remote.service.DriverService.checkExecutable(DriverService.java:137)
+	at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:132)
+	at org.openqa.selenium.chrome.ChromeDriverService.access$000(ChromeDriverService.java:35)
+	at org.openqa.selenium.chrome.ChromeDriverService$Builder.findDefaultExecutable(ChromeDriverService.java:156)
+	at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:346)
+	at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:91)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:123)
+	at Test.CommonMethods.openbrowser(CommonMethods.java:45)
+... Removed 24 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Test-class-passed -->
+          </div> <!-- suite-Test-class-failed -->
+          <div class="suite-Test-class-skipped">
+            <div class="main-panel-header rounded-window-top">
+              <img src="skipped.png"/>
+              <span class="class-name">Test.UserManagementTestCase</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="UserManagement">
+                  </a> <!-- UserManagement -->
+                  <span class="method-name">UserManagement</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Test-class-skipped -->
         </div> <!-- panel Test -->
         <div panel-name="test-xml-Test" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -183,6 +234,7 @@
     &lt;classes&gt;
       &lt;class name=&quot;Test.CommonMethods&quot;/&gt;
       &lt;class name=&quot;Test.LoginTestCase&quot;/&gt;
+      &lt;class name=&quot;Test.UserManagementTestCase&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- CommonMethods --&gt;
 &lt;/suite&gt; &lt;!-- Test --&gt;
@@ -196,7 +248,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">CommonMethods (2 classes)</span>
+                <span class="test-name">CommonMethods (3 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -222,20 +274,28 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(2);
+data.addRows(4);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'openbrowser')
-data.setCell(0, 2, 'Test.CommonMethods')
-data.setCell(0, 3, 18887);
+data.setCell(0, 1, 'logout')
+data.setCell(0, 2, 'Test.LoginTestCase')
+data.setCell(0, 3, 123025);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'login')
 data.setCell(1, 2, 'Test.LoginTestCase')
-data.setCell(1, 3, 5005);
+data.setCell(1, 3, 5002);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'openbrowser')
+data.setCell(2, 2, 'Test.CommonMethods')
+data.setCell(2, 3, 50);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'UserManagement')
+data.setCell(3, 2, 'Test.UserManagementTestCase')
+data.setCell(3, 3, 1);
 window.suiteTableData['Test']= { tableData: data, tableDiv: 'times-div-Test'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 23 seconds</span>
+              <span class="suite-total-time">Total running time: 2 minutes</span>
               <div id="times-div-Test">
               </div> <!-- times-div-Test -->
             </div> <!-- times-div -->
@@ -263,6 +323,8 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">Test.CommonMethods</div> <!-- chronological-class-name -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">openbrowser</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- test-method -->
@@ -271,20 +333,39 @@ return data;
               <div class="chronological-class-name">Test.LoginTestCase</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setup</span>
-                <span class="method-start">18891 ms</span>
+                <span class="method-start">55 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">login</span>
-                <span class="method-start">54125 ms</span>
+                <span class="method-start">84 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">logout</span>
+                <span class="method-start">5093 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">close</span>
-                <span class="method-start">59145 ms</span>
+                <span class="method-start">128126 ms</span>
               </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">Test.UserManagementTestCase</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">setup</span>
+                <span class="method-start">128133 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">UserManagement</span>
+                <span class="method-start">150783 ms</span>
+              </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

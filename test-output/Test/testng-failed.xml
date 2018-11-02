@@ -5,17 +5,30 @@
     <classes>
       <class name="Test.CommonMethods"/>
       <class name="Test.LoginTestCase"/>
+      <class name="Test.UserManagementTestCase"/>
     </classes>
   </test> <!-- CommonMethods -->
   <test name="CommonMethods(failed)">
     <classes>
+      <class name="Test.UserManagementTestCase">
+        <methods>
+          <include name="UserManagement"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- Test.UserManagementTestCase -->
       <class name="Test.LoginTestCase">
         <methods>
+          <include name="logout"/>
           <include name="close"/>
           <include name="setup"/>
           <include name="login"/>
         </methods>
       </class> <!-- Test.LoginTestCase -->
+      <class name="Test.CommonMethods">
+        <methods>
+          <include name="openbrowser"/>
+        </methods>
+      </class> <!-- Test.CommonMethods -->
     </classes>
   </test> <!-- CommonMethods(failed) -->
 </suite> <!-- Failed suite [Test] -->
