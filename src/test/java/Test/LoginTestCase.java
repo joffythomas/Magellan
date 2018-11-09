@@ -16,13 +16,17 @@ import Core.LoginElements;
 public class LoginTestCase {
 
 	static WebDriver driver;
-	public LoginElements objLoginElements;
+	public static LoginElements objLoginElements;
 	public CommonMethods objCommonMethods;
 	public CommonElements objCommonElements;
 	
+	 public void LoginElements(WebDriver driver) {
+		 LoginElements.driver = driver;
+		 PageFactory.initElements(driver, this);
+    }
 
 	@BeforeClass
-	public void setup() throws IOException {
+	public void setup() throws IOException, InterruptedException {
 	
 		objCommonMethods = new CommonMethods();
 		driver=objCommonMethods.getDriver();
@@ -33,31 +37,41 @@ public class LoginTestCase {
 
 	}
 	
-	@Test(priority = 1)
-	public void login() throws InterruptedException {
+	@Test(priority = 2)
+	public static void login() throws InterruptedException {
  		objLoginElements.login("preethi@yopmail.com", "Augusta@12");
-		objLoginElements.LoginButton.click();
+		//objLoginElements.LoginButton.click();
 		Thread.sleep(4000);
 		
 		if(objLoginElements.Logoutthere.isDisplayed()) {
 			objLoginElements.Logoutthere.click();
+			Thread.sleep(4000);
 		}
-		else {
+		else if(objLoginElements.Logoutthere.isDisplayed()==false)  {
 			driver.navigate();
 		}
 	}
 	
-	@Test(priority = 2)
-	public void logout() throws InterruptedException {
-		System.out.println("******************");
- 		objLoginElements.Logoutmainmenu.click();
- 		objLoginElements.Logoutbutton.click();
- 		objLoginElements.LogoutConfirm.click();
+//	@Test(priority = 3)
+//	public void logout() throws InterruptedException {
+//		System.out.println("******************");
+// 		objLoginElements.Logoutmainmenu.click();
+// 		Thread.sleep(4000);
+// 		objLoginElements.Logoutbutton.click();
+// 		Thread.sleep(4000);
+// 		objLoginElements.LogoutConfirm.click();
+//	}
+	
+	public WebDriver getDriver()
+	{
+		 
+		return driver;
+		
 	}
 	
-	@AfterClass
-	public void close() {
-		driver.close();
-	}
+//	@AfterClass
+//	public void close() {
+//		driver.close();
+//	}
 	
 }

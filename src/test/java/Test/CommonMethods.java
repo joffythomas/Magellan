@@ -17,17 +17,10 @@ public class CommonMethods {
 	public static Properties prop;
 	public static FileInputStream FIS;
 	
-/*	public CommonMethods(WebDriver driver){
-		CommonMethods.driver = driver;
-		PageFactory.initElements(driver, this);
-		
-	}*/
-	
 	public static void openpropfile() throws IOException
 	{
 		File file = new File("F:/JOFFY JOY/Auto New Workspace/Jesus/src/main/java/Core/Object.properties");
-	//	FileInputStream FIS = null;
-				
+					
 		try {
 			prop = new Properties();
 			FIS = new FileInputStream(file);
@@ -38,7 +31,7 @@ public class CommonMethods {
 		}
 	}
 	
-	@Test
+	@Test(priority = 1)
 	public static void openbrowser() throws IOException {
 		openpropfile();
 		System.setProperty("webdriver.chrome.driver", "F://JOFFY JOY//Auto New Workspace//Jesus//bin//chromedriver_win32//chromedriver.exe");

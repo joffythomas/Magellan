@@ -28,7 +28,7 @@ public class LoginElements {
 	 @FindBy(how=How.XPATH,using=".//*[@class=\"button mar-bot-10 center\"]//*[@ng-click=\"logOutThere()\"]")
 	 public static WebElement Logoutthere;
 	 
-	 @FindBy(how=How.CLASS_NAME, using="dropdown-toggle")
+	 @FindBy(how=How.XPATH, using=".//*[@class='dropdown-toggle']")
 	 public static WebElement Logoutmainmenu;
 	 
 	 @FindBy(how=How.XPATH,using=".//*[@class='dropdown-menu']//li[7]//a")
@@ -38,12 +38,18 @@ public class LoginElements {
 	 public static WebElement LogoutConfirm;
 	 
 	
-	 public void login(String eemailid, String ppassword) throws InterruptedException {
+	 public static void login(String eemailid, String ppassword) throws InterruptedException {
 		Thread.sleep(5000);
 		 emailid.sendKeys(eemailid);
 		 pwd.sendKeys(ppassword);
+		 LoginButton.click();
 	 }
 	 
-
+	 public WebDriver getDriver()
+		{
+			 
+			return driver;
+			
+		}
 	
 }
