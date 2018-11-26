@@ -43,6 +43,7 @@ public class LoginElements {
 		 emailid.sendKeys(eemailid);
 		 pwd.sendKeys(ppassword);
 		 LoginButton.click();
+		 Thread.sleep(4000);
 	 }
 	 
 	 public WebDriver getDriver()

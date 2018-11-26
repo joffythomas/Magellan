@@ -10,17 +10,17 @@
   </test> <!-- CommonMethods -->
   <test name="CommonMethods(failed)">
     <classes>
-      <class name="Test.UserManagementTestCase">
-        <methods>
-          <include name="setup"/>
-        </methods>
-      </class> <!-- Test.UserManagementTestCase -->
       <class name="Test.LoginTestCase">
         <methods>
           <include name="setup"/>
-          <include name="login"/>
         </methods>
       </class> <!-- Test.LoginTestCase -->
+      <class name="Test.UserManagementTestCase">
+        <methods>
+          <include name="UserManagement"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- Test.UserManagementTestCase -->
     </classes>
   </test> <!-- CommonMethods(failed) -->
 </suite> <!-- Failed suite [Test] -->

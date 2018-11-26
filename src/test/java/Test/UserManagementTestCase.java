@@ -4,6 +4,7 @@ import java.io.IOException;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
@@ -39,8 +40,7 @@ public class UserManagementTestCase {
 		objLoginElements = PageFactory.initElements(driver, LoginElements.class);
 		objLoginTestCase = PageFactory.initElements(driver, LoginTestCase.class);
 		objUserManagementElements = PageFactory.initElements(driver, UserManagementElements.class);
-		
-		//objCommonMethods.openbrowser();
+
 		objCommonMethods.openpropfile();
 		
 	}
@@ -49,14 +49,16 @@ public class UserManagementTestCase {
 	@Test(priority = 4)
 	public void UserManagement() throws InterruptedException, IOException {
 		System.out.println("Entered into usernamagement");
-		//objCommonMethods.openbrowser();
-		//LoginElements.login("preethi@yopmail.com", "Augusta@12");
-		//Thread.sleep(5000);
 		objLoginElements.Logoutmainmenu.click();
 		Thread.sleep(4000);
 		objUserManagementElements.usermanagementmenu.click();
 		
 	}
+	
+//	@AfterClass
+//	public void closeapp() {
+//		driver.close();
+//	}
 	
 	public WebDriver getDriver()
 	{

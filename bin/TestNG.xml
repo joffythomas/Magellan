@@ -5,6 +5,10 @@
       <class name="Test.CommonMethods"/>
       <class name="Test.LoginTestCase"/>
       <class name="Test.UserManagementTestCase"/>
-      </classes>
+      <!--<class name="Test.PaymentTestCase"/>-->
+      <!--<class name="Test.AccountsTestCase"/>-->
+     <!-- <class name="Test.NotificationTestCase"/>-->
+      
+       </classes>
  </test>
 </suite>

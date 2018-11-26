@@ -1,6 +1,7 @@
 package Test;
 
 import java.io.IOException;
+import java.util.Properties;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -17,8 +18,9 @@ public class LoginTestCase {
 
 	static WebDriver driver;
 	public static LoginElements objLoginElements;
-	public CommonMethods objCommonMethods;
+	public static CommonMethods objCommonMethods;
 	public CommonElements objCommonElements;
+	public static Properties prop;
 	
 	 public void LoginElements(WebDriver driver) {
 		 LoginElements.driver = driver;
@@ -39,10 +41,11 @@ public class LoginTestCase {
 	
 	@Test(priority = 2)
 	public static void login() throws InterruptedException {
- 		objLoginElements.login("preethi@yopmail.com", "Augusta@12");
-		//objLoginElements.LoginButton.click();
+ 		//objLoginElements.login("preethi@yopmail.com", "Augusta@12");
+ 		Core.LoginElements.login(objCommonMethods.prop.getProperty("emailid"),objCommonMethods.prop.getProperty("password")); 		
+ 		//objLoginElements.LoginButton.click();
 		Thread.sleep(4000);
-		
+
 		if(objLoginElements.Logoutthere.isDisplayed()) {
 			objLoginElements.Logoutthere.click();
 			Thread.sleep(4000);
