@@ -3,11 +3,12 @@
   <test name="CommonMethods" >
     <classes>
       <class name="Test.CommonMethods"/>
-      <class name="Test.LoginTestCase"/>
-      <class name="Test.UserManagementTestCase"/>
+      <!--<class name="Test.LoginTestCase"/>-->
+      <!--<class name="Test.UserManagementTestCase"/>-->
       <!--<class name="Test.PaymentTestCase"/>-->
       <!--<class name="Test.AccountsTestCase"/>-->
      <!-- <class name="Test.NotificationTestCase"/>-->
+     <class name="Test.LoginDataDriven"/>
       
        </classes>
  </test>

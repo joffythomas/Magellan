@@ -11,6 +11,9 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
 
+import ExcelUtils.Constants;
+import ExcelUtils.ExcelUtils;
+
 public class CommonMethods {
 
 	static WebDriver driver;
@@ -38,6 +41,10 @@ public class CommonMethods {
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.get(prop.getProperty("URL"));
+	}
+	
+	public void getDataSheetforLogin(String SheetName) throws Exception {
+		ExcelUtils.setExcelFile(Constants.ExcelPath + Constants.TestData, SheetName);
 	}
 	
 	public WebDriver getDriver()

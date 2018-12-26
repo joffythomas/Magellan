@@ -1,110 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" total="3" passed="2">
+<testng-results skipped="0" failed="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Test" duration-ms="29398" started-at="2018-11-26T06:53:49Z" finished-at="2018-11-26T06:54:19Z">
+  <suite name="Test" duration-ms="23737" started-at="2018-12-26T08:09:18Z" finished-at="2018-12-26T08:09:42Z">
     <groups>
     </groups>
-    <test name="CommonMethods" duration-ms="29398" started-at="2018-11-26T06:53:49Z" finished-at="2018-11-26T06:54:19Z">
-      <class name="Test.LoginTestCase">
-        <test-method status="PASS" signature="setup()[pri:0, instance:Test.LoginTestCase@c038203]" name="setup" is-config="true" duration-ms="15" started-at="2018-11-26T12:24:00Z" finished-at="2018-11-26T12:24:00Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="PASS" signature="login()[pri:2, instance:Test.LoginTestCase@c038203]" name="login" duration-ms="18410" started-at="2018-11-26T12:24:00Z" finished-at="2018-11-26T12:24:19Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- login -->
-      </class> <!-- Test.LoginTestCase -->
+    <test name="CommonMethods" duration-ms="23737" started-at="2018-12-26T08:09:18Z" finished-at="2018-12-26T08:09:42Z">
       <class name="Test.CommonMethods">
-        <test-method status="PASS" signature="openbrowser()[pri:1, instance:Test.CommonMethods@29ee9faa]" name="openbrowser" duration-ms="10917" started-at="2018-11-26T12:23:49Z" finished-at="2018-11-26T12:24:00Z">
+        <test-method status="PASS" signature="openbrowser()[pri:1, instance:Test.CommonMethods@cb5822]" name="openbrowser" duration-ms="14169" started-at="2018-12-26T13:39:18Z" finished-at="2018-12-26T13:39:32Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openbrowser -->
       </class> <!-- Test.CommonMethods -->
-      <class name="Test.UserManagementTestCase">
-        <test-method status="PASS" signature="setup()[pri:0, instance:Test.UserManagementTestCase@cc285f4]" name="setup" is-config="true" duration-ms="3" started-at="2018-11-26T12:24:19Z" finished-at="2018-11-26T12:24:19Z">
+      <class name="Test.LoginDataDriven">
+        <test-method status="PASS" signature="setup()[pri:0, instance:Test.LoginDataDriven@4b9e13df]" name="setup" is-config="true" duration-ms="52" started-at="2018-12-26T13:39:32Z" finished-at="2018-12-26T13:39:32Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="FAIL" signature="UserManagement()[pri:4, instance:Test.UserManagementTestCase@cc285f4]" name="UserManagement" duration-ms="35" started-at="2018-11-26T12:24:19Z" finished-at="2018-11-26T12:24:19Z">
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":".//*[@class='dropdown-toggle']"}
-  (Session info: chrome=70.0.3538.102)
-  (Driver info: chromedriver=2.36.540470 (e522d04694c7ebea4ba8821272dbef4f9b818c91),platform=Windows NT 10.0.17134 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 0 milliseconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
-System info: host: 'JOFFY', ip: '192.168.1.106', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_141'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.36.540470 (e522d04694c7eb..., userDataDir: C:\Users\joffy\AppData\Loca...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 70.0.3538.102, webStorageEnabled: true}
-Session ID: adc091b0281b10e31f7d3c7b68560be5
-*** Element info: {Using=xpath, value=.//*[@class='dropdown-toggle']}]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":".//*[@class='dropdown-toggle']"}
-  (Session info: chrome=70.0.3538.102)
-  (Driver info: chromedriver=2.36.540470 (e522d04694c7ebea4ba8821272dbef4f9b818c91),platform=Windows NT 10.0.17134 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 0 milliseconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
-System info: host: 'JOFFY', ip: '192.168.1.106', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_141'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.36.540470 (e522d04694c7eb..., userDataDir: C:\Users\joffy\AppData\Loca...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 70.0.3538.102, webStorageEnabled: true}
-Session ID: adc091b0281b10e31f7d3c7b68560be5
-*** Element info: {Using=xpath, value=.//*[@class='dropdown-toggle']}
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
-	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
-	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
-	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:322)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:424)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:314)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy8.click(Unknown Source)
-	at Test.UserManagementTestCase.UserManagement(UserManagementTestCase.java:52)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:643)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:820)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1128)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
-	at org.testng.TestRunner.privateRun(TestRunner.java:782)
-	at org.testng.TestRunner.run(TestRunner.java:632)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
-	at org.testng.TestNG.run(TestNG.java:1064)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+        <test-method status="PASS" signature="usernameEmptyValidation()[pri:2, instance:Test.LoginDataDriven@4b9e13df]" name="usernameEmptyValidation" duration-ms="9500" started-at="2018-12-26T13:39:32Z" finished-at="2018-12-26T13:39:42Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- UserManagement -->
-      </class> <!-- Test.UserManagementTestCase -->
+        </test-method> <!-- usernameEmptyValidation -->
+      </class> <!-- Test.LoginDataDriven -->
     </test> <!-- CommonMethods -->
   </suite> <!-- Test -->
 </testng-results>

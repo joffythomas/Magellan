@@ -4,23 +4,7 @@
   <test name="CommonMethods">
     <classes>
       <class name="Test.CommonMethods"/>
-      <class name="Test.LoginTestCase"/>
-      <class name="Test.UserManagementTestCase"/>
+      <class name="Test.LoginDataDriven"/>
     </classes>
   </test> <!-- CommonMethods -->
-  <test name="CommonMethods(failed)">
-    <classes>
-      <class name="Test.LoginTestCase">
-        <methods>
-          <include name="setup"/>
-        </methods>
-      </class> <!-- Test.LoginTestCase -->
-      <class name="Test.UserManagementTestCase">
-        <methods>
-          <include name="UserManagement"/>
-          <include name="setup"/>
-        </methods>
-      </class> <!-- Test.UserManagementTestCase -->
-    </classes>
-  </test> <!-- CommonMethods(failed) -->
 </suite> <!-- Failed suite [Test] -->
